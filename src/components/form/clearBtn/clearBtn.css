@@ -1,0 +1,13 @@
+.inner-btn {
+	background: none;
+	border: none;
+	left: calc(100% - 30px);
+	opacity: .33;
+	position: absolute;
+	width: 1.2em;
+	z-index: 0;
+ }
+
+.inner-btn:hover {
+	opacity: 1;
+}

@@ -1,0 +1,9 @@
+#Sidebar .nav {
+	font-size: 1.2em;
+}
+#Sidebar .nav svg {
+	width: 1em;
+}
+#Sidebar .nav svg + span {
+	padding-left: .6em;
+}

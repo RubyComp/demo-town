@@ -1,0 +1,4 @@
+.detail-card,
+.detail-card .list-group-item {
+	background-color: var(--bs-gray-100);
+}

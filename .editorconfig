@@ -1,0 +1,28 @@
+const editorconfig = require('editorconfig');
+const fs = require('fs');
+const path = require('path');
+
+const configPath = path.join(__dirname, '.editorconfig');
+const configs = [
+  {
+    name: configPath,
+    contents: fs.readFileSync(configPath, 'utf8')
+  }
+];
+
+const filePath = path.join(__dirname, '/sample.js');
+
+(async () => {
+  console.log(await editorconfig.parseFromFiles(filePath, Promise.resolve(configs)))
+})();
+/*
+  {
+    indent_style: 'tabs',
+    indent_size: 3,
+    end_of_line: 'lf',
+    charset: 'utf-8',
+    trim_trailing_whitespace: true,
+    insert_final_newline: true,
+    tab_width: 3
+  };
+*/

@@ -1,0 +1,31 @@
+#Sidebar {
+	height: 100vh;
+}
+#Sidebar .nav-link img {
+	width: 2.4em;
+}
+
+#Sidebar img.logo {
+	margin-right: .5em;
+	width: 2.5em;
+}
+#Sidebar .nav-link img,
+#Sidebar img.logo {
+	filter: grayscale(1) brightness(0) invert(1);
+}
+#Sidebar .nav-link:not(.active) img {
+	/* filter: grayscale(1) brightness(0); */
+	opacity: .85;
+}
+.nav-pills .nav-link:not(.active):hover {
+	background-color: #ffffff1a;
+	transition: .1s;
+}
+
+.dropdown-toggle {
+	padding: 1em;
+}
+.dropdown-menu {
+	inset: auto auto 0px 0px;
+	transform: translate(0px, -3.2em);
+}

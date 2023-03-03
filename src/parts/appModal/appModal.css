@@ -1,0 +1,13 @@
+.modal-img .modal-body,
+.modal-video .modal-body {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	text-align: center;
+}
+.modal-img .figure,
+.modal-img .figure > img,
+.modal-video video {
+	height: 100%;
+}

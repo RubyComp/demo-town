@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+
+/* :root { */
+	/* --font-family: roboto, arial, sans-serif; */
+	/* --text-color: #03020f; */
+	/* --text-size: 18px; */
+/* } */
+/* background-color: #282c34; */
+/* background-color: #eee; */
+/* color: var(--text-color); */
+/* font-family: var(--font-family); */
+/* font-size: var(--text-size); */
+
+
+body {
+	background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+figure,
+.figure-img {
+	margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#App {
+	background-color: white;
+	min-height: 100vh;
+	opacity: .9;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#Content {
+	flex-grow: 1;
+	height: 0;
+	overflow-y: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.text-right {
+	text-align: right;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pointer {
+	cursor: pointer;
+}
+.plain-link {
+	color: inherit;
+	text-decoration: inherit;
+}
+.plain-link:hover {
+	color: inherit;
+	text-decoration: underline;
+}
+.centered-table th,
+.centered-table td {
+	text-align: center;
+	vertical-align: middle;
+}
+.form-label {
+	margin-bottom: .2rem;
 }

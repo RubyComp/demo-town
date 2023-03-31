@@ -24,7 +24,6 @@ const appContent = () => {
 }
 
 const App = () => {
-
 	return (
 		<Container fluid id="App">
 			<Row>

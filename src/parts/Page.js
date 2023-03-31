@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Residents from '../pages/Residents'
 
@@ -15,7 +15,8 @@ import ObjectEdit from '../pages/ObjectEdit'
 const Page = () => (
 	<div id="Page">
 		<Routes>
-			<Route path="/" element={<Intro/>}></Route>
+			{/* <Route path="/" element={<Intro/>}></Route> */}
+			<Route path="/" element={<Navigate to="/residents" />}></Route>
 			<Route path="/residents" element={<Residents/>}></Route>
 			<Route path="/residents/:slug" element={<ResidentEdit/>}></Route>
 			<Route path="/objects" element={<Objects/>}></Route>

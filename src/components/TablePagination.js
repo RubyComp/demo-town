@@ -9,7 +9,7 @@ const TablePagination = ({count = 1, active = 1/*, link = '/'*/}) => {
 
 	for (let number = 1; number <= count; number++) {
 		items.push(
-			<Pagination.Item key={number} active={number === active}>
+			<Pagination.Item key={number} active={number === active} disabled>
 				{number}
 			</Pagination.Item>
 		)
@@ -17,7 +17,7 @@ const TablePagination = ({count = 1, active = 1/*, link = '/'*/}) => {
 
 	return (
 		<div className="w-100 mt-4 d-flex justify-content-center">
-			<Pagination>{items}</Pagination>
+			<Pagination >{items}</Pagination>
 		</div>
 	)
 }

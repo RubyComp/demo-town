@@ -84,6 +84,15 @@ const Field = ({data}) => {
 				/>
 			)
 
+		case 'select':
+			return (
+				<FieldRFF
+					name={id}
+					options={testStates}
+					component={FieldSelect}
+				/>
+			)
+		
 			// case 'select':
 			// 	return <FieldSelect data={data} />
 
@@ -91,7 +100,7 @@ const Field = ({data}) => {
 			// 	return <FieldSwitch data={data} />
 
 		case 'price':
-			console.log(squarePrice)
+			// console.log(squarePrice)
 			return (
 				<>
 					<Stack direction="horizontal" gap={2}>
@@ -115,16 +124,6 @@ const Field = ({data}) => {
 				</>
 			)
 
-		case 'select':
-			return (
-				<FieldRFF
-					name={id}
-					options={testStates}
-					component={FieldSelect}
-				/>
-			)
-		
-
 		default:
 			return <Alert variant='danger'>Error! Have no component for <code>{type}</code> field.</Alert>
 	}
@@ -134,8 +133,6 @@ const Field = ({data}) => {
 // const ReactSelectAdapter = ({ input, ...rest }) => (
 // 	<Select {...input} {...rest} searchable />
 // )
-
-
 
 // const Field = ({data}) => {
 

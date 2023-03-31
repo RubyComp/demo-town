@@ -5,7 +5,7 @@ const Picture = ({url, alt, height, width}) => {
 	return (
 		<Figure
 			style={{
-				backgroundColor: 'red',
+				backgroundColor: 'silver',
 				display: 'block',
 				height: height,
 				maxWidth: width

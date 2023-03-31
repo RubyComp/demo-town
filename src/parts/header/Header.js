@@ -9,7 +9,6 @@ const Header = () => {
 
 	// const dispatch = useDispatch()
 	const pageTitle = useSelector(state => state.title.titleText)
-
 	// console.log(pageTitle)
 
 	return (
@@ -31,7 +30,7 @@ const Header = () => {
 						<h1 className="fs-4 m-0">{pageTitle}</h1>
 					</div>
 					<form className="col-12 col-lg-auto mb-3 mb-lg-0">
-						<input type="search" className="form-control" placeholder="Search…" aria-label="Search" />
+						<input type="search" className="form-control" placeholder="Search…" aria-label="Search" disabled />
 					</form>
 				</div>
 			</div>

@@ -12,6 +12,7 @@ import useTitle from '../hooks/useTitle'
 import { Form } from 'react-final-form'
 import { useDispatch } from 'react-redux'
 import { changeSquarePrice } from '../store/squarePriceSlice'
+// import { useLocation } from 'react-router-dom'
 
 const InfoSection = () => {
 
@@ -131,28 +132,22 @@ const Tabber = () => {
 
 }
 
-
-
-
 const onSubmit = async values => {
 	window.alert(JSON.stringify(values, 0, 2))
 }
 
-
 const handleChange = test => {
-	// console.log('changed', test)
+	console.log('changed', test)
 }
 
-
-
 const ObjectEdit = () => {
-
-	useTitle('Object: Test')
 
 	// const location = useLocation()
 	// const {pathname} = location
 	// const objectId = pathname.split('/').reverse()[0]
-	// console.log('objectId', objectId)
+
+	// [${objectId}]
+	useTitle('Object: Some apartment')
 
 	// React.useEffect(() => {
 	// 	fetch(config.api.getObjectData)
@@ -180,8 +175,6 @@ const ObjectEdit = () => {
 					// pristine,
 					values
 				}) => {
-
-
 					const {coast, square} = values
 
 					const squarePrice = {
@@ -195,7 +188,7 @@ const ObjectEdit = () => {
 					} else {
 						squarePrice.price = 0
 					}
-					console.log('init', squarePrice)
+
 					const dispatch = useDispatch()
 
 					useEffect(() => {
@@ -207,8 +200,8 @@ const ObjectEdit = () => {
 						<form onSubmit={handleSubmit} onChange={handleChange}>
 							<Row>
 								<Col xs lg="7">
-									<b>{squarePrice.value}</b>
-									<pre style={{fontSize:'12px'}}>{JSON.stringify(values, 0, 2)}</pre>
+									{/* <b>{squarePrice.value}</b> */}
+									{/* <pre style={{fontSize:'12px'}}>{JSON.stringify(values, 0, 2)}</pre> */}
 									<Tabber />
 								</Col>
 								<Col xs lg="5">

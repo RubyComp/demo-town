@@ -7,7 +7,7 @@ const ExampleRow = ({ id, img, name, status, district, year, company }) => {
 	return (
 		<tr>
 			<td>{id}</td>
-			<td><Picture url={img} /></td>
+			<td><Picture url={img} width={64}/></td>
 			<td>{name}</td>
 			<td>{status}</td>
 			<td>{district}</td>
